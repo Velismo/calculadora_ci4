@@ -14,7 +14,9 @@ composer create-project codeigniter4/appstarter calculadora_ci4
 
 De esta manera se crea la aplicación para calculadora_ci4 con todo lo necesario para que pueda funcionar sin tener que hacer nada más.
 
-Para comprobar que se ha instalado correctamente visitamos iniciamos Xampp y vamos al enlace fijado que es [éste](https://localhost/)
+Para comprobar que se ha instalado correctamente iniciamos Xampp y vamos al enlace fijado que es [éste](http://localhost:8080/). Si todo funciona correctamente deberiamos ver la página de bienvenida de Codeigniter 4.
+
+![Página de bienvenida de Codeigniter 4](https://codeigniter.com/user_guide/_images/welcome1.png)
 
 ## Installation & updates
 
