@@ -9,8 +9,17 @@ class Calculadora extends BaseController
         return view('welcome_message');
     }
 
-    public function view($page = 'home')
+    public function view($page = 'calculadora')
     {
-        // ...
+        if (! is_file(APPPATH . 'Views/pages/' . $page . '.php')) {
+            // En caso de que la página no se encuente, se carga la página 404
+            throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
+        }
+
+        $data['title'] = ucfirst($page); // Ponemos en mallúscula la primera letra
+
+        echo view('templates/header', $data);
+        echo view('pages/' . $page, $data);
+        echo view('templates/footer', $data);
     }
 }
