@@ -8,9 +8,7 @@ La guía de usuario correspondiente a esta versión del framework se puede visit
 
 Para su instalación, en mi caso, opto por hacerlo a traves de composer introduciendo la siguiente línea de códgio a traves del terminal e indicando la carpeta de destino del proyecto:
 
-```
-composer create-project codeigniter4/appstarter calculadora_ci4
-```
+`composer create-project codeigniter4/appstarter calculadora_ci4`
 
 De esta manera se crea la aplicación para calculadora_ci4 con todo lo necesario para que pueda funcionar sin tener que hacer nada más.
 
@@ -18,7 +16,11 @@ Para comprobar que se ha instalado correctamente iniciamos Xampp y vamos al enla
 
 ![Página de bienvenida de Codeigniter 4](https://codeigniter.com/user_guide/_images/welcome1.png)
 
-## Installation & updates
+## Creando nuestro primer controlador
+
+Para crear nuestro primer controlador, generamos el archivo **Calculadora.php** en la siguiente ruta **app/Controllers/..** y escribimos el código que se puede ver [aquí](https://github.com/Velismo/calculadora_ci4/blob/master/app/Controllers/Calculadora.php).
+
+Además, para poder añadir cualquier código adiccional a posteriori y que se cargue en todas las páginas que pueda tener nuestro poryecto, creamos dos plantillas: una para **Header** y otra para **Footer**. Será un código sencillo tanto para el [header](), como para el [footer](), al que iremos añadiendo todo lo necesario conforme nuetra aplicación vaya creciendo (Hay que ser precavidos desde el principio :U+263A:).
 
 `composer create-project codeigniter4/appstarter` then `composer update` whenever
 there is a new release of the framework.
