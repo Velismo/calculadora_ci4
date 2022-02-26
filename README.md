@@ -1,4 +1,4 @@
-# Creación del proyecto Calculador para Grupo Blendio
+# Creación del proyecto Calculadora para Grupo Blendio
 
 ## Instalación del framework
 
@@ -25,6 +25,13 @@ Además, para poder añadir cualquier código adiccional a posteriori y que se c
 También creamos la carpeta **pages** en la ruta **app/Views/pages**, para crear la que, por el momento, será nuestra uníca página. La llamamos **calculadora.php**.
 
 Para poder llegar a ella le indicamos la ruta en **app/Config/Routes.php** y la incluimos debajo del área comentada como "*Route Definitions*".
+
+Para terminar añadimos la función cálculo, para poder realizar las operaciones matemáticas necesarias.
+
+## Creamos nuestro primer modelo
+
+
+
 
 `composer create-project codeigniter4/appstarter` then `composer update` whenever
 there is a new release of the framework.
