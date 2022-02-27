@@ -6,7 +6,7 @@ class Calculadora extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
+        $this->load->view('pages/calculadora');
     }
 
     public function view($page = 'calculadora')
@@ -24,14 +24,11 @@ class Calculadora extends BaseController
     }
 
     public function calculo(){
-		$this->load->model('Model_Calculadora');
+		$this->load->model('Modelo_Calculadora');
 		$data['digito1'] = $this->input->post('digito1');
 		$data['digito2'] = $this->input->post('digito2');
 		$data['operador'] = $this->input->post('operator');
-		$data['resultado'] = $this->Model_Calculator->calculo($data['digito1'],$data['digito2'],$data['operador']);
-		
-        echo view('templates/header', $data);
-        echo view('pages/' . $page, $data);
-        echo view('templates/footer', $data);
+		$data['resultado'] = $this->Modelo_Calculadora->calculo($data['digito1'],$data['digito2'],$data['operador']);
+		$this->load->view('pages/calculadora');
 	}
 }
