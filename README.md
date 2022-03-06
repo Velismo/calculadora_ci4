@@ -38,8 +38,12 @@ Dentro del modelo creamos la función cálculo que incluye tres parametros: digi
 
 Para crear la vista de nuestra calculadora, como ya idicamos en la sección del controlador, generamos el archivo **calculadora.php** en la siguiente ruta **app/Views/pages/..** y escribimos el código que se puede ver [aquí](app/Views/pages/calculadora.php)
 
-Al intentar generar el resultado en la misma vista, estoy teniendo problemas y no se muy bien por qué no se está mostrando. Seguiremos intentándolo.
+En la vista ya podemos ver todos los elementos generados e invocados a través del modelo y el controlador. Cuando realizamos las operaciones pertinentes con nuetra calculadora, los resultados se muestran de forma correcta.
+
+La calculadora no es bonita, pero es funcional. :smirk:
 
 ## Incidencias
 Estas son algunas de las incidencias que me he encontrado durante la realización del proyecto:
 - Al crear la vista de la calculadora, no consigo que el resultado, con valor $resultado se muestre en pantalla. He intentado diferentes métodos, pero creo que la mejor solución pasa por no usar un formulario y utilizar cualquier otra forma de obtener el resultado deseado.
+
+-Al eliminar el constructor del modelo, el resultado ya aparece correctamente en la calculadora.
