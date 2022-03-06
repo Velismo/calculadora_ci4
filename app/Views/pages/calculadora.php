@@ -1,4 +1,4 @@
-<form method="GET" action="/Calculadora/calculo">
+<form method="POST" action="/calculadora/calculo">
 		<input type="text" name="digito1" id="digito1" autocomplete="off" value="<?php echo (isset($digito1)?$digito1:0) ?>">
 		<select name="operador" id="operador">
 			<option value="+" <?php echo isset($operador) && $operador=='+' ? 'selected':'' ?>>Sumar</option>

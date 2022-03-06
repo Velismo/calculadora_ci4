@@ -24,11 +24,15 @@ class Calculadora extends BaseController
     }
 
     public function calculo(){
-		$this->load->model('Modelo_Calculadora');
-		$data['digito1'] = $this->input->post('digito1');
-		$data['digito2'] = $this->input->post('digito2');
-		$data['operador'] = $this->input->post('operator');
-		$data['resultado'] = $this->Modelo_Calculadora->calculo($data['digito1'],$data['digito2'],$data['operador']);
-		$this->load->view('pages/calculadora');
+        $data['title'] = 'Prueba';
+		$model= model(Modelo_Calculadora::class);
+		$data['digito1'] = $this->request->getPost('digito1');
+		$data['digito2'] = $this->request->getPost('digito2');
+		$data['operador'] = $this->request->getPost('operador');
+		$data['resultado'] = $model->calculo($data['digito1'],$data['digito2'],$data['operador']);
+		
+        echo view('templates/header', $data);
+        echo view('pages/calculadora', $data);
+        echo view('templates/footer', $data);
 	}
 }
