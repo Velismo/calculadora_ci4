@@ -6,10 +6,6 @@ use CodeIgniter\Model;
 
 class Modelo_Calculadora extends Model
 {
-    public function __construct(){
-        parent::__construct;
-    }
-
     public function calculo($digito1, $digito2, $operador){
         switch($operador) {
             case '+':
